@@ -53,29 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Contact Form Handling
-  const contactForm = document.getElementById('contactForm');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-
-      // Simple validation
-      if (!data.name || !data.email || !data.subject || !data.message) {
-        alert('Please fill in all fields.');
-        return;
-      }
-
-      // In a real implementation, you would send this to a server
-      // For now, just show a success message
-      alert('Thank you for your message! We will get back to you soon.');
-      this.reset();
-    });
-  }
 
   // Header scroll effect
   const header = document.querySelector('.header');
