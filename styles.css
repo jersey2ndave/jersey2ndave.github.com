@@ -397,6 +397,52 @@ img {
   font-size: 14px;
 }
 
+/* Team Section */
+.team-section {
+  margin-top: 48px;
+}
+
+.team-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--color-text-muted);
+}
+
+.team-grid {
+  display: flex;
+  gap: 32px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-image {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+  background: var(--color-bg);
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.team-member:hover .team-image img {
+  transform: scale(1.05);
+}
+
+.team-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 /* ========================================
    News Section
    ======================================== */
@@ -691,6 +737,10 @@ img {
     gap: 48px;
   }
 
+  .team-grid {
+    gap: 24px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -724,6 +774,12 @@ img {
 
   .news-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 
   .footer-grid {
