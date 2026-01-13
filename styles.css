@@ -443,6 +443,12 @@ img {
   font-weight: 500;
 }
 
+.team-role {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
 /* ========================================
    News Section
    ======================================== */
