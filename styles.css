@@ -224,6 +224,25 @@ img {
   color: var(--color-bg);
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-buttons .hero-cta {
+  animation: none;
+}
+
+button.hero-cta {
+  font-family: inherit;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
 /* ========================================
    Sections
    ======================================== */
@@ -567,9 +586,12 @@ img {
   padding: 14px 28px;
   font-size: 14px;
   font-weight: 500;
+  font-family: inherit;
   letter-spacing: 1px;
   border: 1px solid var(--color-text);
   color: var(--color-text);
+  background: transparent;
+  cursor: pointer;
   transition: all var(--transition);
 }
 
@@ -634,6 +656,74 @@ img {
 
 .submit-btn:hover {
   opacity: 0.9;
+}
+
+/* ========================================
+   Mailing List Modal
+   ======================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  padding: 48px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--color-text);
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.modal-text {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-form .submit-btn {
+  width: 100%;
 }
 
 /* ========================================

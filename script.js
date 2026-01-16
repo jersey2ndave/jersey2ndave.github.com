@@ -110,4 +110,39 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(card);
   });
+
+  // Mailing List Modal
+  const mailingListModal = document.getElementById('mailingListModal');
+  const openModalBtns = document.querySelectorAll('.open-mailing-modal');
+  const closeModalBtn = document.getElementById('closeMailingListModal');
+
+  if (openModalBtns.length && mailingListModal) {
+    openModalBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        mailingListModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+      mailingListModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close on overlay click
+    mailingListModal.addEventListener('click', function(e) {
+      if (e.target === mailingListModal) {
+        mailingListModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mailingListModal.classList.contains('active')) {
+        mailingListModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });

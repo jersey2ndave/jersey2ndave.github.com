@@ -70,7 +70,10 @@
     <div class="hero-content">
       <img src="images/J2A_LOGO FOR DEMON.png" alt="Jersey Films 2nd Avenue" class="hero-logo">
       <p class="hero-subtitle">"Nobody knows anything."</p>
-      <a href="#work" class="hero-cta">View Our Work</a>
+      <div class="hero-buttons">
+        <a href="#work" class="hero-cta">View Our Work</a>
+        <button type="button" class="hero-cta open-mailing-modal">Join Our Mailing List</button>
+      </div>
     </div>
   </section>
 
@@ -179,7 +182,7 @@
       <div class="news-grid">
         <article class="news-card">
           <div class="news-image">
-            <img src="https://deadline.com/wp-content/uploads/2025/03/Lizzy-Caplan-John-Stamos-Lucy-Devito-Christine-Ko.jpg" alt="Drag SXSW 2026">
+            <img src="images/Drag_title small.png" alt="Drag SXSW 2026">
           </div>
           <div class="news-content">
             <span class="news-date">January 2026</span>
@@ -275,7 +278,7 @@
             <p><strong>General Inquiries</strong><br>info@jerseyfilms2ndave.com</p>
             <p><strong>Location</strong><br>Los Angeles, California</p>
           </div>
-          <a href="http://eepurl.com/jw8oDM" target="_blank" class="mailing-list-btn">Join Our Mailing List</a>
+          <button type="button" class="mailing-list-btn open-mailing-modal">Join Our Mailing List</button>
         </div>
         <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@jersey2ndave.com" method="POST">
           <input type="hidden" name="_subject" value="New Contact Form Submission - Jersey Films 2nd Avenue">
@@ -336,6 +339,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mailing List Modal -->
+  <div class="modal-overlay" id="mailingListModal">
+    <div class="modal">
+      <button class="modal-close" id="closeMailingListModal" aria-label="Close">&times;</button>
+      <h3 class="modal-title">Join Our Mailing List</h3>
+      <p class="modal-text">Stay updated with our latest news and projects.</p>
+      <form action="https://jersey2ndave.us16.list-manage.com/subscribe/post?u=1f6a50738d441281e9278dea8&amp;id=cf86d7c7b1&amp;f_id=00f7c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="modal-form" target="_blank">
+        <div class="form-group">
+          <label for="mce-EMAIL">Email Address</label>
+          <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="you@example.com">
+        </div>
+        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          <input type="text" name="b_1f6a50738d441281e9278dea8_cf86d7c7b1" tabindex="-1" value="">
+        </div>
+        <button type="submit" class="submit-btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
